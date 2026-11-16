@@ -7,7 +7,7 @@
   --fig-dark: #5f2240;
   --sun: #f2b84b;
   --line: #b9d3cd;
-  --serif: "Young Serif", Georgia, serif;
+  --serif: "Gloock", Georgia, serif;
   --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
@@ -36,10 +36,11 @@ p { margin: 0 0 1rem; max-width: 62ch; }
 /* header */
 .top {
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-  padding: 1.1rem clamp(1.2rem, 5vw, 4rem);
+  padding: 1rem clamp(1.2rem, 5vw, 4rem);
   flex-wrap: wrap;
 }
-.mark { font-family: var(--serif); font-size: 1.35rem; text-decoration: none; }
+.mark { display: flex; align-items: center; gap: .7rem; font-family: var(--serif); font-size: 1.45rem; text-decoration: none; }
+.mark img { width: 46px; height: 46px; }
 .top nav { display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap; }
 .top nav a { text-decoration: none; font-weight: 500; }
 .top nav a:not(.pill):hover { text-decoration: underline; text-underline-offset: 4px; }
@@ -52,7 +53,7 @@ p { margin: 0 0 1rem; max-width: 62ch; }
   padding: clamp(1.5rem, 4vw, 3.5rem) clamp(1.2rem, 5vw, 4rem) clamp(3rem, 6vw, 5.5rem);
   max-width: 1320px; margin: 0 auto;
 }
-.hero h1 { font-size: clamp(2.5rem, 6.2vw, 4.9rem); letter-spacing: -.01em; margin-bottom: 1.4rem; }
+.hero h1 { font-size: clamp(2.5rem, 6vw, 4.6rem); line-height: 1.08; margin-bottom: 1.4rem; }
 .lede { font-size: 1.2rem; max-width: 46ch; }
 .hero-actions { display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap; margin-top: 1.8rem; }
 .hero-art { margin: 0; }
@@ -152,5 +153,6 @@ footer p { margin-bottom: .4rem; }
 @media (max-width: 520px) {
   .how ol { grid-template-columns: 1fr; }
   .top nav { gap: 1rem; }
+  .mark { font-size: 1.25rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
